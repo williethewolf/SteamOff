@@ -23,7 +23,7 @@ input{
 }
 `
 
-function IDForm ({ userID, setUserID }){
+function IDForm ({ setUserID }){
 
     const [updateID,setUpdateID] = useState(null)
 
@@ -38,13 +38,26 @@ function IDForm ({ userID, setUserID }){
         evt.preventDefault()
         // userID= evt.target.value
         setUserID(updateID)
-        console.log(userID)
 
+    }
+
+    const noInputPrompt = () =>{
+        return(
+            <div>ㅤ</div>
+        )
+    }
+
+    const inputPrompt = () =>{
+        return(
+            <div> Introduce your Steam ID64 below to retrive your games</div>
+        )
     }
 
     return (
         <StyledForm>
-        <div> Introduce your Steam ID64 below to retrive your games</div>
+            {updateID
+            ?noInputPrompt()
+            :inputPrompt()}
         <form onSubmit={handleSubmit}>
             <label>
                 <span>Steam ID64:</span>
@@ -53,6 +66,7 @@ function IDForm ({ userID, setUserID }){
                     name="ID64"
                     onChange={handleChange}
                     placeholder = "Your Steam ID64"
+                    autoFocus
                 />
             </label>
             <input type="submit" value="Submit" />        

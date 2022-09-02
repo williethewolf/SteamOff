@@ -3,7 +3,7 @@ import {Routes, Route, Navigate } from 'react-router-dom'
 import Home from '../pages/Home'
 import About from '../pages/About'
 
-function Main (prop){
+function Main ( {setUserProfile} ){
 
     const [idFromForm, setIdFromForm] = useState (null)
     const userID = undefined
@@ -14,6 +14,7 @@ function Main (prop){
                 element = {<Home 
                                 userID={idFromForm} 
                                 setUserID={setIdFromForm}
+                                setUserProfile={setUserProfile}
                             />}
             />
             <Route

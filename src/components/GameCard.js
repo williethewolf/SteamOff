@@ -13,14 +13,50 @@ const StyledCard = styled.div`
     
   }
 
-  img{
+  img {
     box-shadow: 5px 5px 0px black;
       -moz-box-shadow: 10px 10px 5px black;
       -webkit-box-shadow: 3px 6px 10px black;
       -khtml-box-shadow: 10px 10px 5px ;
       position:relative;
-    z-index:91
+    z-index:91;
+    max-width: 80%;
   }
+
+  /* .blurred {
+  position: relative;
+width: 200px;
+height: 100px;
+filter: blur(8px);
+-webkit-filter: blur(8px);
+
+}
+
+
+.blurred::before {
+position: absolute;
+content: '';
+z-index: -1;
+width: 200px;
+height: 50px;
+background-size: cover;
+/* background-image: url(image.jpg); */
+img{
+    box-shadow: 5px 5px 0px black;
+      -moz-box-shadow: 10px 10px 5px black;
+      -webkit-box-shadow: 3px 6px 10px black;
+      -khtml-box-shadow: 10px 10px 5px ;
+      position:relative;
+    z-index:91;
+    max-width: 80%;
+}
+
+/* 
+.blurred::after{
+    background-size: cover;
+} */
+
+
   Button {
     margin-top: 1rem;
     font-family: "Open Sans", sans-serif;
@@ -63,7 +99,7 @@ h2{
 const GameCard = ({name, appid, playtime_forever, rtime_last_played}) => {
     let img =`https://steamcdn-a.akamaihd.net/steam/apps/${appid}/library_600x900.jpg`
 //     const oGImg= `https://steamcdn-a.akamaihd.net/steam/apps/${appid}/library_600x900.jpg`
-//     const subImg = `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/hero_capsule.jpg`
+    const altImg = `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`
 
 //     async function checkImage(url){
      
@@ -84,7 +120,9 @@ const GameCard = ({name, appid, playtime_forever, rtime_last_played}) => {
     
     return(
         <StyledCard>
-            <GameCardImage  img={img} />
+            <div>
+            <GameCardImage  img={img} altImg={altImg} />
+            </div>
             <GameCardBody
                 name = {name}
                 appid = {appid}

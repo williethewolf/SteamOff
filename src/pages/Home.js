@@ -2,7 +2,7 @@ import IDForm from "../components/IDinputForm"
 import GamesDashboard from "../components/GamesDashboard"
 import { useEffect, useState, useRef } from 'react'
 
-function Home ({userID, setUserID}){
+function Home ({userID, setUserID , setUserProfile}){
     const [games, setGames] = useState(null)
 
     const API_URL = "http://localhost:4000/api/users/"
@@ -13,15 +13,19 @@ function Home ({userID, setUserID}){
         try{
             const response = await fetch (API_URL+userID.ID64, {})
             const data = await response.json()
-            setGames(JSON.parse(data))
+            setGames(data)
+            setUserProfile(data)
+            console.log("all data passed")
+                  
         } catch (error){
-
+            console.log(error)
         }
     }
+
     useEffect(() => {
         getGamesRef.current = getGames
     })
-    
+
     useEffect(() => {
         if(userID){
             console.log("getting games")
@@ -39,7 +43,6 @@ function Home ({userID, setUserID}){
         <>
             <div>HOME</div>
             <IDForm 
-                userID={userID}
                 setUserID = {setUserID}
             />
             <GamesDashboard games={games} />
