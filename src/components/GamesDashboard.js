@@ -36,6 +36,12 @@ button{
   touch-action: manipulation;
 }
 
+Button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
 button::disabled,
 button[disabled]{
     border: 1px solid #999999;
@@ -70,8 +76,13 @@ button[disabled]{
 `
 
 const StyledContainer = styled.div`
-
-  margin-top:2rem;
+    background-color: #2C323B;
+    overflow: auto;
+   
+    .gamecase{
+    margin-top:
+    2rem;
+    margin-bottom: 2rem;}
 
 `
 
@@ -79,13 +90,15 @@ function GamesDashboard ({ games }){
 
     const [buttonStatus, setButtonStatus]= useState("")
 
+    const [gameURL, setGameURL]= useState("steam://rungameid/70")
+
 
     
     const userLoaded = () =>{
             /* setButtonStatus("all") */
             return (<div>
                         <div className='vanishing-prompt'>Account Found</div>
-                        <button onClick={()=>setButtonStatus("Showing one")}>Show one</button><button onClick ={()=>setButtonStatus("Random pick")}>Just Pick One for me</button><button onClick={()=>setButtonStatus("Showing all")}>Show all</button>
+                        <button onClick={()=>setButtonStatus("Showing one")}>Show one</button><a href={gameURL}><button onClick ={()=>setButtonStatus("Random pick")}>Just Pick One for me</button></a><button onClick={()=>setButtonStatus("Showing all")}>Show all</button>
                     </div>)            
         }
 /*     
@@ -120,12 +133,27 @@ function GamesDashboard ({ games }){
         }
 
     const loadRandom = () =>{
+        const pick = randomPick(games.games)
+            console.log(pick)
+            setGameURL(`steam://rungameid/${pick.appid}`)
+            console.log(gameURL)
+    }
 
+    const initRandom = () =>{
+        const pick = randomPick(games.games)
+            console.log(pick)
+            return `steam://rungameid/${pick.appid}`
     }
 
     const loading = () => {
         return( <div><h1>Type your Steam ID64...</h1></div>)
     }
+
+    useEffect(() => {
+        if(games){
+        loadRandom()
+        }
+    },[games])
 
     useEffect(() => {
         if(buttonStatus == "Showing all"){
@@ -136,6 +164,7 @@ function GamesDashboard ({ games }){
             setButtonStatus(loadOne)
         }else if(buttonStatus == "Random pick"){
             console.log(buttonStatus)
+            loadRandom()
         }else{
 
         }    
@@ -152,7 +181,9 @@ function GamesDashboard ({ games }){
         <hr/>
         </StyledButtonDash>
         <StyledContainer>
-        {buttonStatus}    
+            <div className='gamecase'>
+                {buttonStatus}
+            </div>
         </StyledContainer>
         </>
     )

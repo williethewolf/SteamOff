@@ -81,8 +81,9 @@ img{
 
 Button:active {
   box-shadow: 0px 0px 0px 0px;
-  top: 5px;
-  left: 5px;
+  right: 49%;
+  bottom: 110px;
+  
 }
 
 @media (min-width: 768px) {

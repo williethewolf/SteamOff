@@ -21,6 +21,9 @@ input{
     margin: 8px 0;
     box-sizing: border-box;
 }
+a{
+    color: inherit;
+}
 `
 
 function IDForm ({ setUserID }){
@@ -49,7 +52,7 @@ function IDForm ({ setUserID }){
 
     const inputPrompt = () =>{
         return(
-            <div> Introduce your Steam ID64 below to retrive your games</div>
+            <div> Introduce your <a href="https://steamcommunity.com/discussions/forum/1/1736588252411302797" target="_blank">Steam ID64</a> below to retrive your games</div>
         )
     }
 
