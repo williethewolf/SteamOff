@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/SteamOff/static/css/main.7159ad17.css",
-    "main.js": "/SteamOff/static/js/main.cf128c3c.js",
+    "main.js": "/SteamOff/static/js/main.f73e3264.js",
     "static/js/787.71df535f.chunk.js": "/SteamOff/static/js/787.71df535f.chunk.js",
     "static/media/Steam_icon_logo.webp": "/SteamOff/static/media/Steam_icon_logo.5813c664c80a645df04e.webp",
     "static/media/Commando_29.webp": "/SteamOff/static/media/Commando_29.f13bc9d97ac8d3a3c04d.webp",
     "index.html": "/SteamOff/index.html",
     "main.7159ad17.css.map": "/SteamOff/static/css/main.7159ad17.css.map",
-    "main.cf128c3c.js.map": "/SteamOff/static/js/main.cf128c3c.js.map",
+    "main.f73e3264.js.map": "/SteamOff/static/js/main.f73e3264.js.map",
     "787.71df535f.chunk.js.map": "/SteamOff/static/js/787.71df535f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7159ad17.css",
-    "static/js/main.cf128c3c.js"
+    "static/js/main.f73e3264.js"
   ]
 }
