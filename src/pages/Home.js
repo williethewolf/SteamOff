@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from 'react'
 function Home ({userID, setUserID , setUserProfile}){
     const [games, setGames] = useState(null)
 
-    const API_URL = "http://localhost:4000/api/users/"
+    const API_URL = "https://steamoff.herokuapp.com/api/users/"
 
     const getGamesRef = useRef(null)
 
