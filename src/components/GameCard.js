@@ -1,7 +1,6 @@
 import GameCardBody from './GCardBody'
 import GameCardImage from './GCardImage'
 import styled from "styled-components";
-import missingCover from '../MissingCover.webp'
 
 const StyledCard = styled.div`
   width: "18rem";

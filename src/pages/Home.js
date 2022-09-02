@@ -1,3 +1,4 @@
+import Head from '../components/Head'
 import IDForm from "../components/IDinputForm"
 import GamesDashboard from "../components/GamesDashboard"
 import { useEffect, useState, useRef } from 'react'
@@ -41,6 +42,7 @@ function Home ({userID, setUserID , setUserProfile}){
 
     return(      
         <>
+            <Head title ="STEAM Off - HOME" />
             <div>HOME</div>
             <IDForm 
                 setUserID = {setUserID}

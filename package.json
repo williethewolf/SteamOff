@@ -11,6 +11,7 @@
     "openid-client": "^5.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-image": "^4.0.3",
     "react-infinite-scroller": "^1.2.6",
     "react-router-dom": "^6.3.0",
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

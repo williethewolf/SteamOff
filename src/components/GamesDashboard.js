@@ -139,15 +139,15 @@ function GamesDashboard ({ games }){
             console.log(gameURL)
     }
 
-    const initRandom = () =>{
-        const pick = randomPick(games.games)
-            console.log(pick)
-            return `steam://rungameid/${pick.appid}`
-    }
+    // const initRandom = () =>{
+    //     const pick = randomPick(games.games)
+    //         console.log(pick)
+    //         return `steam://rungameid/${pick.appid}`
+    // }
 
-    const loading = () => {
-        return( <div><h1>Type your Steam ID64...</h1></div>)
-    }
+    // const loading = () => {
+    //     return( <div><h1>Type your Steam ID64...</h1></div>)
+    // }
 
     useEffect(() => {
         if(games){
@@ -156,13 +156,13 @@ function GamesDashboard ({ games }){
     },[games])
 
     useEffect(() => {
-        if(buttonStatus == "Showing all"){
+        if(buttonStatus === "Showing all"){
             console.log(buttonStatus)
             setButtonStatus(loadAll)
-        }else if(buttonStatus == "Showing one"){
+        }else if(buttonStatus === "Showing one"){
             console.log(buttonStatus)
             setButtonStatus(loadOne)
-        }else if(buttonStatus == "Random pick"){
+        }else if(buttonStatus === "Random pick"){
             console.log(buttonStatus)
             loadRandom()
         }else{

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import logo from '../Steam_icon_logo.webp'
 import { Link } from 'react-router-dom'
+import Head from '../components/Head'
 
 const StyledAbout = styled.div`
  a{
@@ -29,7 +30,9 @@ const StyledAbout = styled.div`
 function About (prop){
     
 
-    return( 
+    return(
+        <>
+        <Head title ="STEAM Off - ABOUT" />
         <StyledAbout>
         <div>ABOUT</div> 
         <Link to="/">
@@ -39,14 +42,15 @@ function About (prop){
            
             </div>
         </Link>
-        <p><a href="https://youtu.be/QuoxprhNunM?t=108" target="_blank">'Let off some steam, Bennett'</a></p>
+        <p><a href="https://youtu.be/QuoxprhNunM?t=108" target="_blank" rel="noreferrer">'Let off some steam, Bennett'</a></p>
         <div className="blurb">
             <p>How many times have you opened Steam, just to endlessly and aimlessly browse your library just to end up not playing anything at all because you don't have enough time left?</p>
             <p>Take the indecisiveness out of the equation. Shake up you library to come accross titles you've forgotten or didn't even know you had. Or just let STEAM off take that weight off your shoulders and pick a game for you!</p>
-            <p>Kick back, input your <a href="https://steamcommunity.com/discussions/forum/1/1736588252411302797" target="_blank">Steam Id64</a>, pick random games until you find one you like or straight up open up a surprise. </p>
+            <p>Kick back, input your <a href="https://steamcommunity.com/discussions/forum/1/1736588252411302797" target="_blank" rel="noreferrer">Steam Id64</a>, pick random games until you find one you like or straight up open up a surprise. </p>
             <p>It's time to let off some STEAM©!</p>
         </div>
         </StyledAbout>                
+        </> 
     )
 
 }
