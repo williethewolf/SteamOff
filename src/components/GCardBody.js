@@ -9,7 +9,7 @@ const GameCardBody = ({ name, appid, playtime, last_played }) => {
     <div className="card-body">
       <h2 className="card-title">{name}</h2>
       <div className="card-text">Time played: {playTimeInHours}(h)</div>
-      <div className="card-text">Last time you played {lastPlayedHumanDate.split(',')[0]}</div>
+      <div className="card-text">Last time played {lastPlayedHumanDate.split(',')[0]}</div>
       <Button url={appid} />
     </div>
   );

@@ -19,7 +19,7 @@ function Home ({userID, setUserID , setUserProfile}){
             console.log("all data passed")
                   
         } catch (error){
-            console.log(error)
+            return( <div>ID not found</div>)
         }
     }
 

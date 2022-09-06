@@ -92,14 +92,20 @@ function GamesDashboard ({ games }){
 
     const [gameURL, setGameURL]= useState("steam://rungameid/70")
 
+    let privateAccount = false;
+
 
     
     const userLoaded = () =>{
-            /* setButtonStatus("all") */
+            if (games.games){
+                privateAccountSetter(false)                
             return (<div>
-                        <div className='vanishing-prompt'>Account Found</div>
+                        <div className='vanishing-prompt'>Account Found.  Select option to continue. </div>
                         <button onClick={()=>setButtonStatus("Showing one")}>Show one</button><a href={gameURL}><button onClick ={()=>setButtonStatus("Random pick")}>Just Pick One for me</button></a><button onClick={()=>setButtonStatus("Showing all")}>Show all</button>
-                    </div>)            
+                    </div>) 
+            }else{ 
+                    privateAccountSetter(true)
+            }
         }
 /*     
     const reshuffleOnClick = () =>{
@@ -109,6 +115,7 @@ function GamesDashboard ({ games }){
         loadAll()
     } */
     const noUserLoaded = () =>{
+        
         return (<div>
                     <div>Waiting for account input </div>
                     <div>
@@ -123,7 +130,14 @@ function GamesDashboard ({ games }){
 
 
     const randomPick = (array) =>{
+        if (array){
+            
         return array[Math.floor(Math.random()*array.length)]
+        }else{
+            console.log(privateAccount)
+            console.log(games)
+            return ("Account not public. Try a different one or change your privacy settings")
+        }
     }
 
     const loadOne = () =>{
@@ -133,10 +147,16 @@ function GamesDashboard ({ games }){
         }
 
     const loadRandom = () =>{
+        privateAccount = false
         const pick = randomPick(games.games)
             console.log(pick)
             setGameURL(`steam://rungameid/${pick.appid}`)
             console.log(gameURL)
+    }
+
+    const privateAccountSetter= (value) =>{
+        privateAccount = value
+        //return <div>Account not public. Try a different one or change your privacy settings</div>
     }
 
     // const initRandom = () =>{
@@ -151,7 +171,13 @@ function GamesDashboard ({ games }){
 
     useEffect(() => {
         if(games){
-        loadRandom()
+         
+         if (!privateAccount){
+            loadRandom()
+         setButtonStatus("Showing all")}
+         else{
+            
+         }
         }
     },[games])
 
@@ -181,9 +207,12 @@ function GamesDashboard ({ games }){
         <hr/>
         </StyledButtonDash>
         <StyledContainer>
-            <div className='gamecase'>
+            {!privateAccount
+            ?(<div className='gamecase'>
                 {buttonStatus}
-            </div>
+            </div>)
+            :(<div><h1>Account not public. Try a different one or change your privacy settings</h1></div>)
+            }
         </StyledContainer>
         </>
     )
