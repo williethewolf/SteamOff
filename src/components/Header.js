@@ -59,10 +59,10 @@ const StyledHeader = styled.header`
   pointer-events: none;
   }
 
-  @media (min-width:768){
+  /* @media (min-width:768){
     justify-content: space-between;
     padding: 0 1rem;
-  }
+  } */
 `
 
 function Header ({userProfile}) {
