@@ -211,7 +211,7 @@ function GamesDashboard ({ games }){
             ?(<div className='gamecase'>
                 {buttonStatus}
             </div>)
-            :(<div><h1>Account not public. Try a different one or change your privacy settings</h1></div>)
+            :(<div><h1>Account not public. Try a different one or <a href ="https://asapguide.com/how-to-make-steam-profile-public/"  target="_blank" rel="noreferrer">change your privacy settings</a></h1></div>)
             }
         </StyledContainer>
         </>
