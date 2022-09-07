@@ -21,6 +21,7 @@ RESTful API developed with Node, Express and Mongoose (MongoDB). Valve's Steam A
 **App currently is not responsive and works properly only on desktop.**
 
 Some ID64 to test out:
+
 Gabe Newel: 76561197960287930 (private key, error handling showcase)
 
 ATF (DOTA 2 Pro Player): 76561198858721548
