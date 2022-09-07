@@ -8,13 +8,19 @@ import { useEffect, useState } from "react";
 const StyledHeader = styled.header`
     font-size: calc(10px + 2vmin);
     background-color: #171A21;
-    display : flex;
+    /* display : flex; */
     /* justify-content: center; */
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     padding: 0 2rem;
     align-items: center;
     height: 5rem;
     color: white;
+    padding-top: 6px;
   a{
     text-decoration: none;
     color: inherit;
@@ -27,8 +33,9 @@ const StyledHeader = styled.header`
   }
   
   .profile-cont{
-    display: flex;
-  justify-content: center;
+    /* display: flex;
+  justify-content: center; */
+  text-align: right;
   span{
     font-size:calc( 1px + 2.5vmin);
     margin: 10px; 
@@ -41,6 +48,10 @@ const StyledHeader = styled.header`
     max-height: 50px;
     border: 5px solid #555;
   }
+  }
+
+  .logo-cont{
+    text-align: left;
   }
 
   .App-logo{
@@ -97,7 +108,7 @@ const noProfile = () => {
     return(
     <StyledHeader>
         <Link to="/">
-            <div>STEAM off<img src={logo} alt="logo" className="App-logo"/></div>
+            <div className="logo-cont">STEAM off<img src={logo} alt="logo" className="App-logo"/></div>
         </Link>
         <div>
         <Link to="/">
