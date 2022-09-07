@@ -1,7 +1,7 @@
 # STEAM Off
 How many times have you opened Steam, just to endlessly and aimlessly browse your library just to end up not playing anything at all because you don't have enough time left?
 
-Take the indecisiveness out of the equation. Shake up you library to come across titles you've forgotten or didn't even know you had. Or just let STEAM off take that weight off your shoulders and pick a game for you!
+Take the indecisiveness out of the equation. Shake up you library to come across titles you've forgotten or didn't even know you had. Or just let **STEAM Off** take that weight off your shoulders and pick a game for you!
 
 Kick back, input your Steam Id64, pick random games until you find one you like or straight up open up a surprise.
 
