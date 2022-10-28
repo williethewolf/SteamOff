@@ -7,6 +7,9 @@ const StyledAllGamesContainer = styled.div`
   display: grid; 
   grid-auto-rows: minmax(min-content, max-content); 
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  @media only screen and (max-width: 800px){
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   gap: 5rem 1rem; 
   grid-template-areas: 
     ". . . ."
