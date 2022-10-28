@@ -8,8 +8,7 @@ const StyledCard = styled.div`
   .card-body{
     display: block;
     position:relative;
-    z-index:97
-    
+    z-index:97;  
   }
 
   img {
@@ -20,6 +19,9 @@ const StyledCard = styled.div`
       position:relative;
     z-index:91;
     max-width: 80%;
+    @media only screen and (max-width: 800px){
+      margin-bottom: 20px;
+  }
   }
 
   /* .blurred {
@@ -48,6 +50,7 @@ img{
       position:relative;
     z-index:91;
     max-width: 80%;
+
 }
 
 /* 
@@ -61,6 +64,7 @@ img{
     font-family: "Open Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
+  white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
@@ -76,6 +80,10 @@ img{
   right:50%;
   transform: translate(50%, 0);
     bottom:115px;
+    @media only screen and (max-width: 800px){
+      bottom:145px;
+  } 
+  
   }
 
 Button:active {

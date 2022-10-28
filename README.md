@@ -38,5 +38,5 @@ OG.MISHA (DOTA 2 Pro Player): 76561198050391294
 - ***Steam ID authentication:***: Log in directly with you steam ID instead of looking for your Steam ID64
 - ***Sorting options***: Sort you games by different parameters like hours played or recently played.
 - ***Lists***: Create list of your own games to pick from or to exclude from random picks.
-- ***Responsive Mobile***:  Make a responsive UI for mobile (currently only works on desktop)
+- ~~***Responsive Mobile***:  Make a responsive UI for mobile (currently only works on desktop)~~
 - ***Swiping system***:  Swipe left on those games you don't want to play and swipe right to launch.

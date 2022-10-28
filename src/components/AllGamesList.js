@@ -11,10 +11,10 @@ const StyledAllGamesContainer = styled.div`
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   gap: 5rem 1rem; 
-  grid-template-areas: 
+  /* grid-template-areas: 
     ". . . ."
     ". . . ."
-    ". . . ."; 
+    ". . . .";  */
     background-color: #2C323B;
     padding: 3rem;
     position:relative;

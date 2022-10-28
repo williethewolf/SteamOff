@@ -21,12 +21,22 @@ const StyledHeader = styled.header`
     height: 5rem;
     color: white;
     padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 800px){
+   display: flex;
+   height:auto;
+   justify-content: center;
+  }
   a{
     text-decoration: none;
     color: inherit;
   }
   span{
-    margin: 0 50px;
+    margin: 0 40px;
+    @media only screen and (max-width: 800px){
+      margin: 0 20px;
+  }
   }
   img{
     margin: 0 15px;
@@ -36,6 +46,8 @@ const StyledHeader = styled.header`
     /* display: flex;
   justify-content: center; */
   text-align: right;
+  @media only screen and (max-width: 800px){
+  text-align: center;}
   span{
     font-size:calc( 1px + 2.5vmin);
     margin: 10px; 
@@ -52,6 +64,7 @@ const StyledHeader = styled.header`
 
   .logo-cont{
     text-align: left;
+    margin-left: 1.5rem;
   }
 
   .App-logo{
