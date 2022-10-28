@@ -16,6 +16,8 @@ Project developed with React, JavaScript, HTML5 and CSS.
 **Back End API:**
 RESTful API developed with Node, Express and Mongoose (MongoDB). Valve's Steam API implementation to retrieve data.
 
+[Link to back end repo](https://github.com/williethewolf/SteamOff-Back)
+
 # Getting Started: 
 [App Link](https://williethewolf.github.io/SteamOff/#!)
 **App currently is not responsive and works properly only on desktop.**
